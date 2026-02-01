@@ -1,28 +1,27 @@
-.PHONY: backfill backfill-trades analysis analyze setup teardown build
+.PHONY: analyze index package lint format setup
 
 RUN = uv run main.py
 
-backfill:
-	$(RUN) backfill
+analyze:
+	$(RUN) analyze
 
-backfill-trades:
-	$(RUN) backfill-trades
+index:
+	$(RUN) index
+
+package:
+	$(RUN) package
+
+lint:
+	uv run ruff check .
+	uv run ruff format --check .
+
+format:
+	uv run ruff check --fix .
+	uv run ruff format .
 
 setup:
-	$(RUN) setup
-
-teardown:
-	$(RUN) teardown
-
-analysis:
-	$(RUN) setup
-	$(RUN) analysis
-	$(RUN) teardown
-
-analyze:
-	$(RUN) setup
-	$(RUN) analysis $(filter-out $@,$(MAKECMDGOALS))
-	$(RUN) teardown
+	sh scripts/install-tools.sh
+	sh scripts/download.sh
 
 %:
 	@:
