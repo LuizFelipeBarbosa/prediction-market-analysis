@@ -4,24 +4,29 @@ set -e
 URL="https://s3.jbecker.dev/data.tar.zst"
 OUTPUT_FILE="data.tar.zst"
 DATA_DIR="data"
+DATA_PATH="${DATA_DIR}/${OUTPUT_FILE}"
+SENTINEL="${DATA_DIR}/.download_complete"
 
-# Check if data directory already exists
-if [ -d "$DATA_DIR" ]; then
-    echo "Data directory already exists, skipping download."
+
+# Skip if a previous run completed successfully
+if [ -f "$SENTINEL" ]; then
+    echo "Data already downloaded and extracted, skipping."
     exit 0
 fi
 
 # Download file using best available tool
 download() {
+    mkdir -p "$DATA_DIR"
+
     if command -v aria2c &> /dev/null; then
         echo "Downloading with aria2c..."
-        aria2c -x 16 -s 16 -o "$OUTPUT_FILE" "$URL"
+        aria2c -x 16 -s 16 -d "$DATA_DIR" -o "$OUTPUT_FILE" "$URL"
     elif command -v curl &> /dev/null; then
         echo "aria2c not found, falling back to curl..."
-        curl -L -o "$OUTPUT_FILE" "$URL"
+        curl -L --create-dirs -o "$DATA_PATH" "$URL"
     elif command -v wget &> /dev/null; then
         echo "aria2c and curl not found, falling back to wget..."
-        wget -O "$OUTPUT_FILE" "$URL"
+        wget -O "$DATA_PATH" "$URL"
     else
         echo "Error: No download tool available (aria2c, curl, or wget required)."
         exit 1
@@ -37,15 +42,15 @@ extract() {
     fi
 
     echo "Extracting $OUTPUT_FILE..."
-    zstd -d "$OUTPUT_FILE" --stdout | tar -xf -
+    zstd -d "$DATA_PATH" --stdout | tar -xf -
     echo "Extraction complete."
 }
 
 # Cleanup downloaded archive
 cleanup() {
-    if [ -f "$OUTPUT_FILE" ]; then
+    if [ -f "$DATA_PATH" ]; then
         echo "Cleaning up..."
-        rm "$OUTPUT_FILE"
+        rm "$DATA_PATH"
     fi
 }
 
@@ -54,4 +59,5 @@ download
 extract
 cleanup
 
+touch "$SENTINEL"
 echo "Data directory ready."
