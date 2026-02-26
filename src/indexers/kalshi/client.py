@@ -61,6 +61,8 @@ class KalshiClient:
                 all_trades.extend(trades)
                 if verbose:
                     print(f"Fetched {len(trades)} trades (total: {len(all_trades)})")
+            else:
+                break
 
             cursor = data.get("cursor")
             if not cursor:
@@ -88,6 +90,8 @@ class KalshiClient:
             if markets:
                 all_markets.extend(markets)
                 print(f"Fetched {len(markets)} markets (total: {len(all_markets)})")
+            else:
+                break
 
             cursor = data.get("cursor")
             if not cursor:
@@ -118,7 +122,7 @@ class KalshiClient:
 
             yield markets, cursor
 
-            if not cursor:
+            if not cursor or not markets:
                 break
 
     def get_recent_trades(self, limit: int = 100) -> list[Trade]:

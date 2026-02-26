@@ -21,6 +21,13 @@ def _is_retryable_error(exc: BaseException) -> bool:
     return False
 
 
+def _log_retry(retry_state):
+    """Custom hook to print retry attempts clearly."""
+    if retry_state.outcome.failed:
+        exc = retry_state.outcome.exception()
+        print(f"Retrying Kalshi API request (attempt {retry_state.attempt_number}) due to: {type(exc).__name__} {exc}")
+
+
 def retry_request():
     """Decorator for HTTP requests with exponential backoff.
 
@@ -34,8 +41,8 @@ def retry_request():
     """
     return retry(
         stop=stop_after_attempt(5),
-        wait=wait_exponential(multiplier=1, min=1, max=60),
+        wait=wait_exponential(multiplier=1, min=1, max=10),
         retry=retry_if_exception(_is_retryable_error),
-        before_sleep=before_sleep_log(logger, logging.WARNING),
+        before_sleep=_log_retry,
         reraise=True,
     )
