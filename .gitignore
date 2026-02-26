@@ -27,4 +27,5 @@ scratchpad
 fig
 *.tar.zst
 output
+output_all
 .tmp
