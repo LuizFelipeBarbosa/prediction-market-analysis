@@ -116,27 +116,76 @@ class SpeechMentionSubgroupAccuracyAnalysis(Analysis):
         df["correct"] = df["predicted_yes"] == df["actual_yes"]
 
         # Expected Profit calculation
-        # Buy Yes > 70%, Buy No < 30%
-        def calc_trade_profit(row):
+        def calc_trade_profits(row):
             price = row["pre_speech_prob"]  # cents
             fee = self._kalshi_fee(price)
             resolved_yes = row["actual_yes"]
             
+            res = {}
+            
+            # Extremes (>70 Yes, <30 No)
             if price > 70.0:
                 cost = price + fee
                 payout = 100.0 if resolved_yes else 0.0
-                return pd.Series({"traded": 1, "cost": cost, "payout": payout})
+                res["ext_traded"] = 1
+                res["ext_cost"] = cost
+                res["ext_payout"] = payout
             elif price < 30.0:
                 cost = (100.0 - price) + fee
                 payout = 100.0 if not resolved_yes else 0.0
-                return pd.Series({"traded": 1, "cost": cost, "payout": payout})
+                res["ext_traded"] = 1
+                res["ext_cost"] = cost
+                res["ext_payout"] = payout
             else:
-                return pd.Series({"traded": 0, "cost": 0.0, "payout": 0.0})
+                res["ext_traded"] = 0
+                res["ext_cost"] = 0.0
+                res["ext_payout"] = 0.0
+                
+            # > 60 Yes
+            if price > 60.0:
+                res["gt60_traded"] = 1
+                res["gt60_cost"] = price + fee
+                res["gt60_payout"] = 100.0 if resolved_yes else 0.0
+            else:
+                res["gt60_traded"] = 0
+                res["gt60_cost"] = 0.0
+                res["gt60_payout"] = 0.0
 
-        trade_stats = df.apply(calc_trade_profit, axis=1)
-        df["traded"] = trade_stats["traded"]
-        df["trade_cost"] = trade_stats["cost"]
-        df["trade_payout"] = trade_stats["payout"]
+            # > 70 Yes
+            if price > 70.0:
+                res["gt70_traded"] = 1
+                res["gt70_cost"] = price + fee
+                res["gt70_payout"] = 100.0 if resolved_yes else 0.0
+            else:
+                res["gt70_traded"] = 0
+                res["gt70_cost"] = 0.0
+                res["gt70_payout"] = 0.0
+
+            # > 80 Yes
+            if price > 80.0:
+                res["gt80_traded"] = 1
+                res["gt80_cost"] = price + fee
+                res["gt80_payout"] = 100.0 if resolved_yes else 0.0
+            else:
+                res["gt80_traded"] = 0
+                res["gt80_cost"] = 0.0
+                res["gt80_payout"] = 0.0
+
+            # > 90 Yes
+            if price > 90.0:
+                res["gt90_traded"] = 1
+                res["gt90_cost"] = price + fee
+                res["gt90_payout"] = 100.0 if resolved_yes else 0.0
+            else:
+                res["gt90_traded"] = 0
+                res["gt90_cost"] = 0.0
+                res["gt90_payout"] = 0.0
+
+            return pd.Series(res)
+
+        trade_stats = df.apply(calc_trade_profits, axis=1)
+        for col in trade_stats.columns:
+            df[col] = trade_stats[col]
 
         # Run subgroup aggregations
         subgroups = ["Group 1: Trump Markets", "Group 2: Press & Mayoral", "Group 3: Niche / One-offs"]
@@ -163,22 +212,38 @@ class SpeechMentionSubgroupAccuracyAnalysis(Analysis):
             cal["actual_yes_pct"] = np.where(cal["n"] > 0, cal["actual_yes_count"] / cal["n"], np.nan)
             calibration_dfs[g] = cal
             
-             # EV Profitability
-            g_traded_df = g_df[g_df["traded"] == 1]
-            total_cost = g_traded_df["trade_cost"].sum()
-            total_payout = g_traded_df["trade_payout"].sum()
+            # EV Profitability
+            def get_counts_profit(prefix):
+                g_traded_df = g_df[g_df[f"{prefix}_traded"] == 1]
+                total_cost = g_traded_df[f"{prefix}_cost"].sum()
+                total_payout = g_traded_df[f"{prefix}_payout"].sum()
+                prof = (total_payout - total_cost) / total_cost if total_cost > 0 else 0.0
+                return len(g_traded_df), prof
             
-            expected_profit_per_dollar = (total_payout - total_cost) / total_cost if total_cost > 0 else 0.0
+            trades_ext, prof_ext = get_counts_profit("ext")
+            trades_60, prof_60 = get_counts_profit("gt60")
+            trades_70, prof_70 = get_counts_profit("gt70")
+            trades_80, prof_80 = get_counts_profit("gt80")
+            trades_90, prof_90 = get_counts_profit("gt90")
+            
             profit_breakdown.append({
                 "subgroup": g,
-                "total_markets": tot,
+                "total_mention_contracts": tot,
                 "accuracy": acc,
-                "total_extremes_traded": len(g_traded_df),
-                "profit_per_dollar": expected_profit_per_dollar
+                "ext_trades": trades_ext,
+                "ext_profit": prof_ext,
+                "gt60_trades": trades_60,
+                "gt60_profit": prof_60,
+                "gt70_trades": trades_70,
+                "gt70_profit": prof_70,
+                "gt80_trades": trades_80,
+                "gt80_profit": prof_80,
+                "gt90_trades": trades_90,
+                "gt90_profit": prof_90,
             })
 
         profit_df = pd.DataFrame(profit_breakdown)
-        print("\n--- Buy Extremes Strategy Expected Profit ---")
+        print("\n--- Buy Extremes & Favorites Strategy Expected Profits ---")
         print(profit_df.to_string(index=False))
 
         # Generate figures and charts
@@ -201,7 +266,7 @@ class SpeechMentionSubgroupAccuracyAnalysis(Analysis):
             cal = calibration_dfs[g]
             
             p_info = profit_df[profit_df["subgroup"] == g].iloc[0]
-            tot_markets = p_info["total_markets"]
+            tot_markets = p_info["total_mention_contracts"]
             acc = float(p_info["accuracy"] * 100)
             
             x = np.arange(len(cal))
@@ -242,7 +307,7 @@ class SpeechMentionSubgroupAccuracyAnalysis(Analysis):
         for _, row in profit_df.iterrows():
             chart_data.append({
                 "subgroup": row["subgroup"],
-                "profit": float(round(row["profit_per_dollar"] * 100, 2)),
+                "profit": float(round(row["ext_profit"] * 100, 2)),
                 "accuracy": float(round(row["accuracy"] * 100, 2))
             })
                 
