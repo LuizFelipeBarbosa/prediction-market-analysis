@@ -48,9 +48,11 @@ class AnalysisOutput:
     """Output from an analysis run."""
 
     figure: Figure | FuncAnimation | None = None
+    figures: dict[str, Figure] | None = None
     data: pd.DataFrame | None = None
     chart: ChartConfig | None = None
     metadata: dict | None = None
+    markdown: str | None = None
 
 
 class Analysis(ABC):
@@ -104,15 +106,15 @@ class Analysis(ABC):
 
         Args:
             output_dir: Directory to save outputs.
-            formats: List of formats to save. Defaults to ["png", "pdf", "csv"].
-                     Supported: png, pdf, svg, gif, csv, json.
+            formats: List of formats to save. Defaults to ["png", "pdf", "csv", "md"].
+                     Supported: png, pdf, svg, gif, csv, json, md.
             dpi: Resolution for raster formats (default: 300).
 
         Returns:
             Dict mapping format to saved file path.
         """
         if formats is None:
-            formats = ["png", "pdf", "csv"]
+            formats = ["png", "pdf", "csv", "md"]
 
         output_dir = Path(output_dir)
         output_dir.mkdir(parents=True, exist_ok=True)
@@ -137,6 +139,19 @@ class Analysis(ABC):
             if isinstance(output.figure, Figure):
                 plt.close(output.figure)
 
+        if output.figures is not None:
+            fig_formats = [f for f in formats if f in ("png", "pdf", "svg", "gif")]
+            for name, fig in output.figures.items():
+                for fmt in fig_formats:
+                    path = output_dir / f"{self.name}_{name}.{fmt}"
+                    if fmt != "gif" and isinstance(fig, Figure):
+                        fig.savefig(path, dpi=dpi, bbox_inches="tight")
+                        saved[f"{name}_{fmt}"] = path
+                
+                # Close figure to free memory
+                if isinstance(fig, Figure):
+                    plt.close(fig)
+
         # Save CSV
         if output.data is not None and "csv" in formats:
             path = output_dir / f"{self.name}.csv"
@@ -148,6 +163,12 @@ class Analysis(ABC):
             path = output_dir / f"{self.name}.json"
             path.write_text(output.chart.to_json())
             saved["json"] = path
+            
+        # Save Markdown text
+        if output.markdown is not None and "md" in formats:
+            path = output_dir / f"{self.name}.md"
+            path.write_text(output.markdown)
+            saved["md"] = path
 
         return saved
 

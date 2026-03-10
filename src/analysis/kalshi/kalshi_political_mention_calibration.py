@@ -144,11 +144,20 @@ class KalshiPoliticalMentionCalibrationDeviationOverTimeAnalysis(Analysis):
 
         # Create output dataframe
         output_df = pd.DataFrame({"date": dates, "mean_absolute_deviation": deviations})
+        
+        # Build markdown text
+        markdown_text = f"""# Kalshi Political Mention Calibration Deviation
+
+This analysis tracks the cumulative mean absolute deviation of prediction market prices from their true resolution probabilities over time.
+
+## Calibration Deviation Over Time
+{output_df.to_markdown(index=False)}
+"""
 
         fig = self._create_figure(dates, deviations)
         chart = self._create_chart(output_df)
 
-        return AnalysisOutput(figure=fig, data=output_df, chart=chart)
+        return AnalysisOutput(figure=fig, data=output_df, chart=chart, markdown=markdown_text)
 
     def _create_figure(self, dates: list, deviations: list) -> plt.Figure:
         """Create the matplotlib figure."""

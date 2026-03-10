@@ -1,0 +1,17 @@
+                               ticker  ... price_10m
+0  KXEARNINGSMENTIONKTOS-26JUN30-ORBI  ...        99
+1            KXWOMENTION-26FEB28-FIGH  ...        30
+2            KXWOMENTION-26MAR01-TAHO  ...        17
+3        KXNEWSOMMENTION-26FEB21-EDUC  ...         1
+4         KXTRUMPMENTION-26FEB21-MADU  ...         1
+
+[5 rows x 10 columns]
+       price_7d   price_3d   price_1d   price_6h   price_1h  price_10m
+count       0.0        5.0       22.0       76.0       94.0       94.0
+mean       <NA>       57.4  54.181818  49.868421  46.095745  45.234043
+std        <NA>  34.107184  36.511755  32.016805  43.217895  46.647944
+min        <NA>       29.0        1.0        1.0        1.0        1.0
+25%        <NA>       30.0      23.75      21.75        1.0        1.0
+50%        <NA>       39.0       42.5       44.5       32.0       15.5
+75%        <NA>       93.0       95.0       85.0       99.0       99.0
+max        <NA>       96.0       99.0       99.0       99.0       99.0
