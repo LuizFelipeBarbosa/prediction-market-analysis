@@ -1,0 +1,614 @@
+{
+  "type": "line",
+  "data": [
+    {
+      "price": 1,
+      "Maker bought YES": 0.83,
+      "Maker bought NO": 1.4,
+      "Implied probability": 1.0
+    },
+    {
+      "price": 2,
+      "Maker bought YES": 1.57,
+      "Maker bought NO": 1.99,
+      "Implied probability": 2.0
+    },
+    {
+      "price": 3,
+      "Maker bought YES": 2.69,
+      "Maker bought NO": 3.0,
+      "Implied probability": 3.0
+    },
+    {
+      "price": 4,
+      "Maker bought YES": 3.63,
+      "Maker bought NO": 4.31,
+      "Implied probability": 4.0
+    },
+    {
+      "price": 5,
+      "Maker bought YES": 4.19,
+      "Maker bought NO": 4.58,
+      "Implied probability": 5.0
+    },
+    {
+      "price": 6,
+      "Maker bought YES": 5.42,
+      "Maker bought NO": 5.64,
+      "Implied probability": 6.0
+    },
+    {
+      "price": 7,
+      "Maker bought YES": 6.63,
+      "Maker bought NO": 6.3,
+      "Implied probability": 7.0
+    },
+    {
+      "price": 8,
+      "Maker bought YES": 8.36,
+      "Maker bought NO": 8.75,
+      "Implied probability": 8.0
+    },
+    {
+      "price": 9,
+      "Maker bought YES": 8.36,
+      "Maker bought NO": 9.13,
+      "Implied probability": 9.0
+    },
+    {
+      "price": 10,
+      "Maker bought YES": 9.72,
+      "Maker bought NO": 10.12,
+      "Implied probability": 10.0
+    },
+    {
+      "price": 11,
+      "Maker bought YES": 10.35,
+      "Maker bought NO": 11.61,
+      "Implied probability": 11.0
+    },
+    {
+      "price": 12,
+      "Maker bought YES": 12.01,
+      "Maker bought NO": 12.38,
+      "Implied probability": 12.0
+    },
+    {
+      "price": 13,
+      "Maker bought YES": 12.93,
+      "Maker bought NO": 13.44,
+      "Implied probability": 13.0
+    },
+    {
+      "price": 14,
+      "Maker bought YES": 13.52,
+      "Maker bought NO": 13.73,
+      "Implied probability": 14.0
+    },
+    {
+      "price": 15,
+      "Maker bought YES": 15.37,
+      "Maker bought NO": 16.31,
+      "Implied probability": 15.0
+    },
+    {
+      "price": 16,
+      "Maker bought YES": 16.07,
+      "Maker bought NO": 16.39,
+      "Implied probability": 16.0
+    },
+    {
+      "price": 17,
+      "Maker bought YES": 16.0,
+      "Maker bought NO": 15.93,
+      "Implied probability": 17.0
+    },
+    {
+      "price": 18,
+      "Maker bought YES": 17.38,
+      "Maker bought NO": 17.16,
+      "Implied probability": 18.0
+    },
+    {
+      "price": 19,
+      "Maker bought YES": 19.28,
+      "Maker bought NO": 19.55,
+      "Implied probability": 19.0
+    },
+    {
+      "price": 20,
+      "Maker bought YES": 19.86,
+      "Maker bought NO": 23.2,
+      "Implied probability": 20.0
+    },
+    {
+      "price": 21,
+      "Maker bought YES": 22.24,
+      "Maker bought NO": 24.59,
+      "Implied probability": 21.0
+    },
+    {
+      "price": 22,
+      "Maker bought YES": 23.18,
+      "Maker bought NO": 21.99,
+      "Implied probability": 22.0
+    },
+    {
+      "price": 23,
+      "Maker bought YES": 23.3,
+      "Maker bought NO": 22.5,
+      "Implied probability": 23.0
+    },
+    {
+      "price": 24,
+      "Maker bought YES": 23.84,
+      "Maker bought NO": 25.62,
+      "Implied probability": 24.0
+    },
+    {
+      "price": 25,
+      "Maker bought YES": 24.19,
+      "Maker bought NO": 25.02,
+      "Implied probability": 25.0
+    },
+    {
+      "price": 26,
+      "Maker bought YES": 26.22,
+      "Maker bought NO": 25.85,
+      "Implied probability": 26.0
+    },
+    {
+      "price": 27,
+      "Maker bought YES": 28.75,
+      "Maker bought NO": 28.97,
+      "Implied probability": 27.0
+    },
+    {
+      "price": 28,
+      "Maker bought YES": 29.19,
+      "Maker bought NO": 32.39,
+      "Implied probability": 28.0
+    },
+    {
+      "price": 29,
+      "Maker bought YES": 28.58,
+      "Maker bought NO": 29.65,
+      "Implied probability": 29.0
+    },
+    {
+      "price": 30,
+      "Maker bought YES": 29.46,
+      "Maker bought NO": 31.53,
+      "Implied probability": 30.0
+    },
+    {
+      "price": 31,
+      "Maker bought YES": 33.65,
+      "Maker bought NO": 35.88,
+      "Implied probability": 31.0
+    },
+    {
+      "price": 32,
+      "Maker bought YES": 33.66,
+      "Maker bought NO": 36.33,
+      "Implied probability": 32.0
+    },
+    {
+      "price": 33,
+      "Maker bought YES": 33.72,
+      "Maker bought NO": 34.9,
+      "Implied probability": 33.0
+    },
+    {
+      "price": 34,
+      "Maker bought YES": 34.65,
+      "Maker bought NO": 36.47,
+      "Implied probability": 34.0
+    },
+    {
+      "price": 35,
+      "Maker bought YES": 32.91,
+      "Maker bought NO": 34.71,
+      "Implied probability": 35.0
+    },
+    {
+      "price": 36,
+      "Maker bought YES": 35.49,
+      "Maker bought NO": 35.8,
+      "Implied probability": 36.0
+    },
+    {
+      "price": 37,
+      "Maker bought YES": 36.25,
+      "Maker bought NO": 38.9,
+      "Implied probability": 37.0
+    },
+    {
+      "price": 38,
+      "Maker bought YES": 34.14,
+      "Maker bought NO": 40.09,
+      "Implied probability": 38.0
+    },
+    {
+      "price": 39,
+      "Maker bought YES": 37.79,
+      "Maker bought NO": 40.28,
+      "Implied probability": 39.0
+    },
+    {
+      "price": 40,
+      "Maker bought YES": 39.78,
+      "Maker bought NO": 39.94,
+      "Implied probability": 40.0
+    },
+    {
+      "price": 41,
+      "Maker bought YES": 40.05,
+      "Maker bought NO": 40.29,
+      "Implied probability": 41.0
+    },
+    {
+      "price": 42,
+      "Maker bought YES": 39.44,
+      "Maker bought NO": 39.09,
+      "Implied probability": 42.0
+    },
+    {
+      "price": 43,
+      "Maker bought YES": 40.8,
+      "Maker bought NO": 41.39,
+      "Implied probability": 43.0
+    },
+    {
+      "price": 44,
+      "Maker bought YES": 42.7,
+      "Maker bought NO": 43.69,
+      "Implied probability": 44.0
+    },
+    {
+      "price": 45,
+      "Maker bought YES": 43.08,
+      "Maker bought NO": 45.3,
+      "Implied probability": 45.0
+    },
+    {
+      "price": 46,
+      "Maker bought YES": 47.06,
+      "Maker bought NO": 47.53,
+      "Implied probability": 46.0
+    },
+    {
+      "price": 47,
+      "Maker bought YES": 46.11,
+      "Maker bought NO": 48.83,
+      "Implied probability": 47.0
+    },
+    {
+      "price": 48,
+      "Maker bought YES": 48.7,
+      "Maker bought NO": 46.84,
+      "Implied probability": 48.0
+    },
+    {
+      "price": 49,
+      "Maker bought YES": 48.31,
+      "Maker bought NO": 49.15,
+      "Implied probability": 49.0
+    },
+    {
+      "price": 50,
+      "Maker bought YES": 51.67,
+      "Maker bought NO": 52.53,
+      "Implied probability": 50.0
+    },
+    {
+      "price": 51,
+      "Maker bought YES": 52.03,
+      "Maker bought NO": 53.32,
+      "Implied probability": 51.0
+    },
+    {
+      "price": 52,
+      "Maker bought YES": 52.28,
+      "Maker bought NO": 52.86,
+      "Implied probability": 52.0
+    },
+    {
+      "price": 53,
+      "Maker bought YES": 54.09,
+      "Maker bought NO": 54.54,
+      "Implied probability": 53.0
+    },
+    {
+      "price": 54,
+      "Maker bought YES": 53.89,
+      "Maker bought NO": 54.87,
+      "Implied probability": 54.0
+    },
+    {
+      "price": 55,
+      "Maker bought YES": 58.58,
+      "Maker bought NO": 57.8,
+      "Implied probability": 55.0
+    },
+    {
+      "price": 56,
+      "Maker bought YES": 58.45,
+      "Maker bought NO": 60.45,
+      "Implied probability": 56.0
+    },
+    {
+      "price": 57,
+      "Maker bought YES": 61.63,
+      "Maker bought NO": 63.38,
+      "Implied probability": 57.0
+    },
+    {
+      "price": 58,
+      "Maker bought YES": 62.21,
+      "Maker bought NO": 62.6,
+      "Implied probability": 58.0
+    },
+    {
+      "price": 59,
+      "Maker bought YES": 61.94,
+      "Maker bought NO": 61.46,
+      "Implied probability": 59.0
+    },
+    {
+      "price": 60,
+      "Maker bought YES": 63.28,
+      "Maker bought NO": 61.78,
+      "Implied probability": 60.0
+    },
+    {
+      "price": 61,
+      "Maker bought YES": 63.74,
+      "Maker bought NO": 63.14,
+      "Implied probability": 61.0
+    },
+    {
+      "price": 62,
+      "Maker bought YES": 66.62,
+      "Maker bought NO": 64.18,
+      "Implied probability": 62.0
+    },
+    {
+      "price": 63,
+      "Maker bought YES": 64.82,
+      "Maker bought NO": 64.11,
+      "Implied probability": 63.0
+    },
+    {
+      "price": 64,
+      "Maker bought YES": 65.11,
+      "Maker bought NO": 66.42,
+      "Implied probability": 64.0
+    },
+    {
+      "price": 65,
+      "Maker bought YES": 64.56,
+      "Maker bought NO": 64.81,
+      "Implied probability": 65.0
+    },
+    {
+      "price": 66,
+      "Maker bought YES": 65.09,
+      "Maker bought NO": 64.51,
+      "Implied probability": 66.0
+    },
+    {
+      "price": 67,
+      "Maker bought YES": 66.44,
+      "Maker bought NO": 63.06,
+      "Implied probability": 67.0
+    },
+    {
+      "price": 68,
+      "Maker bought YES": 67.47,
+      "Maker bought NO": 64.27,
+      "Implied probability": 68.0
+    },
+    {
+      "price": 69,
+      "Maker bought YES": 69.4,
+      "Maker bought NO": 70.34,
+      "Implied probability": 69.0
+    },
+    {
+      "price": 70,
+      "Maker bought YES": 68.22,
+      "Maker bought NO": 70.85,
+      "Implied probability": 70.0
+    },
+    {
+      "price": 71,
+      "Maker bought YES": 70.16,
+      "Maker bought NO": 72.33,
+      "Implied probability": 71.0
+    },
+    {
+      "price": 72,
+      "Maker bought YES": 72.5,
+      "Maker bought NO": 73.71,
+      "Implied probability": 72.0
+    },
+    {
+      "price": 73,
+      "Maker bought YES": 74.59,
+      "Maker bought NO": 75.72,
+      "Implied probability": 73.0
+    },
+    {
+      "price": 74,
+      "Maker bought YES": 76.17,
+      "Maker bought NO": 74.78,
+      "Implied probability": 74.0
+    },
+    {
+      "price": 75,
+      "Maker bought YES": 73.69,
+      "Maker bought NO": 74.68,
+      "Implied probability": 75.0
+    },
+    {
+      "price": 76,
+      "Maker bought YES": 77.51,
+      "Maker bought NO": 77.57,
+      "Implied probability": 76.0
+    },
+    {
+      "price": 77,
+      "Maker bought YES": 78.2,
+      "Maker bought NO": 77.54,
+      "Implied probability": 77.0
+    },
+    {
+      "price": 78,
+      "Maker bought YES": 77.56,
+      "Maker bought NO": 77.07,
+      "Implied probability": 78.0
+    },
+    {
+      "price": 79,
+      "Maker bought YES": 80.17,
+      "Maker bought NO": 78.08,
+      "Implied probability": 79.0
+    },
+    {
+      "price": 80,
+      "Maker bought YES": 80.79,
+      "Maker bought NO": 80.87,
+      "Implied probability": 80.0
+    },
+    {
+      "price": 81,
+      "Maker bought YES": 82.8,
+      "Maker bought NO": 83.1,
+      "Implied probability": 81.0
+    },
+    {
+      "price": 82,
+      "Maker bought YES": 84.46,
+      "Maker bought NO": 84.19,
+      "Implied probability": 82.0
+    },
+    {
+      "price": 83,
+      "Maker bought YES": 85.0,
+      "Maker bought NO": 83.27,
+      "Implied probability": 83.0
+    },
+    {
+      "price": 84,
+      "Maker bought YES": 84.99,
+      "Maker bought NO": 85.29,
+      "Implied probability": 84.0
+    },
+    {
+      "price": 85,
+      "Maker bought YES": 86.29,
+      "Maker bought NO": 86.8,
+      "Implied probability": 85.0
+    },
+    {
+      "price": 86,
+      "Maker bought YES": 87.35,
+      "Maker bought NO": 87.3,
+      "Implied probability": 86.0
+    },
+    {
+      "price": 87,
+      "Maker bought YES": 88.5,
+      "Maker bought NO": 88.77,
+      "Implied probability": 87.0
+    },
+    {
+      "price": 88,
+      "Maker bought YES": 88.99,
+      "Maker bought NO": 89.83,
+      "Implied probability": 88.0
+    },
+    {
+      "price": 89,
+      "Maker bought YES": 90.03,
+      "Maker bought NO": 90.88,
+      "Implied probability": 89.0
+    },
+    {
+      "price": 90,
+      "Maker bought YES": 91.22,
+      "Maker bought NO": 91.64,
+      "Implied probability": 90.0
+    },
+    {
+      "price": 91,
+      "Maker bought YES": 92.32,
+      "Maker bought NO": 91.97,
+      "Implied probability": 91.0
+    },
+    {
+      "price": 92,
+      "Maker bought YES": 93.23,
+      "Maker bought NO": 93.41,
+      "Implied probability": 92.0
+    },
+    {
+      "price": 93,
+      "Maker bought YES": 94.68,
+      "Maker bought NO": 94.8,
+      "Implied probability": 93.0
+    },
+    {
+      "price": 94,
+      "Maker bought YES": 95.45,
+      "Maker bought NO": 96.31,
+      "Implied probability": 94.0
+    },
+    {
+      "price": 95,
+      "Maker bought YES": 96.14,
+      "Maker bought NO": 96.87,
+      "Implied probability": 95.0
+    },
+    {
+      "price": 96,
+      "Maker bought YES": 97.09,
+      "Maker bought NO": 97.74,
+      "Implied probability": 96.0
+    },
+    {
+      "price": 97,
+      "Maker bought YES": 98.38,
+      "Maker bought NO": 98.35,
+      "Implied probability": 97.0
+    },
+    {
+      "price": 98,
+      "Maker bought YES": 98.32,
+      "Maker bought NO": 99.08,
+      "Implied probability": 98.0
+    },
+    {
+      "price": 99,
+      "Maker bought YES": 99.19,
+      "Maker bought NO": 99.63,
+      "Implied probability": 99.0
+    }
+  ],
+  "xKey": "price",
+  "yKeys": [
+    "Maker bought YES",
+    "Maker bought NO",
+    "Implied probability"
+  ],
+  "title": "Maker Win Rate by Position Direction",
+  "yUnit": "percent",
+  "strokeDasharrays": [
+    null,
+    null,
+    "5 5"
+  ],
+  "xLabel": "Maker's Purchase Price (cents)",
+  "yLabel": "Win Rate (%)"
+}

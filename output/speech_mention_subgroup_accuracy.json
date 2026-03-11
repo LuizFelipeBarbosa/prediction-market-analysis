@@ -1,0 +1,68 @@
+{
+  "type": "line",
+  "data": [
+    {
+      "interval": "7d",
+      "Group 1: Trump Markets": 20.0,
+      "Group 2: Press & Mayoral": 12.98,
+      "Group 3: Niche / One-offs": 10.83
+    },
+    {
+      "interval": "3d",
+      "Group 1: Trump Markets": 10.75,
+      "Group 2: Press & Mayoral": 11.96,
+      "Group 3: Niche / One-offs": 10.39
+    },
+    {
+      "interval": "1d",
+      "Group 1: Trump Markets": 6.66,
+      "Group 2: Press & Mayoral": 9.66,
+      "Group 3: Niche / One-offs": 9.87
+    },
+    {
+      "interval": "6h",
+      "Group 1: Trump Markets": 8.17,
+      "Group 2: Press & Mayoral": 8.81,
+      "Group 3: Niche / One-offs": 9.43
+    },
+    {
+      "interval": "2h",
+      "Group 1: Trump Markets": 12.64,
+      "Group 2: Press & Mayoral": 12.29,
+      "Group 3: Niche / One-offs": 10.88
+    },
+    {
+      "interval": "1h",
+      "Group 1: Trump Markets": 16.99,
+      "Group 2: Press & Mayoral": 15.01,
+      "Group 3: Niche / One-offs": 18.54
+    },
+    {
+      "interval": "30m",
+      "Group 1: Trump Markets": 18.65,
+      "Group 2: Press & Mayoral": 18.16,
+      "Group 3: Niche / One-offs": 18.56
+    },
+    {
+      "interval": "10m",
+      "Group 1: Trump Markets": 18.88,
+      "Group 2: Press & Mayoral": 19.18,
+      "Group 3: Niche / One-offs": 18.96
+    }
+  ],
+  "xKey": "interval",
+  "yKeys": [
+    "Group 1: Trump Markets",
+    "Group 2: Press & Mayoral",
+    "Group 3: Niche / One-offs"
+  ],
+  "title": "Calibration Bias Reduction Near Close (MAD)",
+  "yUnit": "percent",
+  "colors": {
+    "Group 1: Trump Markets": "#d62728",
+    "Group 2: Press & Mayoral": "#1f77b4",
+    "Group 3: Niche / One-offs": "#ff7f0e"
+  },
+  "xLabel": "Time Before Market Close",
+  "yLabel": "Mean Absolute Deviation (%)"
+}

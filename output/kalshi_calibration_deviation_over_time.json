@@ -1,0 +1,977 @@
+{
+  "type": "area",
+  "data": [
+    {
+      "date": "2021-07-18",
+      "deviation": 18.19
+    },
+    {
+      "date": "2021-07-25",
+      "deviation": 11.69
+    },
+    {
+      "date": "2021-08-01",
+      "deviation": 8.25
+    },
+    {
+      "date": "2021-08-08",
+      "deviation": 8.19
+    },
+    {
+      "date": "2021-08-15",
+      "deviation": 5.21
+    },
+    {
+      "date": "2021-08-22",
+      "deviation": 3.58
+    },
+    {
+      "date": "2021-08-29",
+      "deviation": 3.12
+    },
+    {
+      "date": "2021-09-05",
+      "deviation": 3.0
+    },
+    {
+      "date": "2021-09-12",
+      "deviation": 2.51
+    },
+    {
+      "date": "2021-09-19",
+      "deviation": 2.74
+    },
+    {
+      "date": "2021-09-26",
+      "deviation": 2.47
+    },
+    {
+      "date": "2021-10-03",
+      "deviation": 2.11
+    },
+    {
+      "date": "2021-10-10",
+      "deviation": 2.07
+    },
+    {
+      "date": "2021-10-17",
+      "deviation": 2.43
+    },
+    {
+      "date": "2021-10-24",
+      "deviation": 2.57
+    },
+    {
+      "date": "2021-10-31",
+      "deviation": 2.34
+    },
+    {
+      "date": "2021-11-07",
+      "deviation": 2.15
+    },
+    {
+      "date": "2021-11-14",
+      "deviation": 2.09
+    },
+    {
+      "date": "2021-11-21",
+      "deviation": 1.95
+    },
+    {
+      "date": "2021-11-28",
+      "deviation": 1.96
+    },
+    {
+      "date": "2021-12-05",
+      "deviation": 1.77
+    },
+    {
+      "date": "2021-12-12",
+      "deviation": 1.7
+    },
+    {
+      "date": "2021-12-19",
+      "deviation": 1.66
+    },
+    {
+      "date": "2021-12-26",
+      "deviation": 1.74
+    },
+    {
+      "date": "2022-01-02",
+      "deviation": 1.75
+    },
+    {
+      "date": "2022-01-09",
+      "deviation": 1.64
+    },
+    {
+      "date": "2022-01-16",
+      "deviation": 1.49
+    },
+    {
+      "date": "2022-01-23",
+      "deviation": 1.46
+    },
+    {
+      "date": "2022-01-30",
+      "deviation": 1.42
+    },
+    {
+      "date": "2022-02-06",
+      "deviation": 1.32
+    },
+    {
+      "date": "2022-02-13",
+      "deviation": 1.15
+    },
+    {
+      "date": "2022-02-20",
+      "deviation": 1.09
+    },
+    {
+      "date": "2022-02-27",
+      "deviation": 1.14
+    },
+    {
+      "date": "2022-03-06",
+      "deviation": 1.21
+    },
+    {
+      "date": "2022-03-13",
+      "deviation": 1.29
+    },
+    {
+      "date": "2022-03-20",
+      "deviation": 1.3
+    },
+    {
+      "date": "2022-03-27",
+      "deviation": 1.29
+    },
+    {
+      "date": "2022-04-03",
+      "deviation": 1.22
+    },
+    {
+      "date": "2022-04-10",
+      "deviation": 1.2
+    },
+    {
+      "date": "2022-04-17",
+      "deviation": 1.17
+    },
+    {
+      "date": "2022-04-24",
+      "deviation": 1.22
+    },
+    {
+      "date": "2022-05-01",
+      "deviation": 1.27
+    },
+    {
+      "date": "2022-05-08",
+      "deviation": 1.24
+    },
+    {
+      "date": "2022-05-15",
+      "deviation": 1.25
+    },
+    {
+      "date": "2022-05-22",
+      "deviation": 1.21
+    },
+    {
+      "date": "2022-05-29",
+      "deviation": 1.23
+    },
+    {
+      "date": "2022-06-05",
+      "deviation": 1.15
+    },
+    {
+      "date": "2022-06-12",
+      "deviation": 1.14
+    },
+    {
+      "date": "2022-06-19",
+      "deviation": 0.94
+    },
+    {
+      "date": "2022-06-26",
+      "deviation": 0.82
+    },
+    {
+      "date": "2022-07-03",
+      "deviation": 0.84
+    },
+    {
+      "date": "2022-07-10",
+      "deviation": 0.87
+    },
+    {
+      "date": "2022-07-17",
+      "deviation": 0.7
+    },
+    {
+      "date": "2022-07-24",
+      "deviation": 0.64
+    },
+    {
+      "date": "2022-07-31",
+      "deviation": 0.62
+    },
+    {
+      "date": "2022-08-07",
+      "deviation": 0.7
+    },
+    {
+      "date": "2022-08-14",
+      "deviation": 0.6
+    },
+    {
+      "date": "2022-08-21",
+      "deviation": 0.58
+    },
+    {
+      "date": "2022-08-28",
+      "deviation": 0.6
+    },
+    {
+      "date": "2022-09-04",
+      "deviation": 0.65
+    },
+    {
+      "date": "2022-09-11",
+      "deviation": 0.66
+    },
+    {
+      "date": "2022-09-18",
+      "deviation": 0.67
+    },
+    {
+      "date": "2022-09-25",
+      "deviation": 0.58
+    },
+    {
+      "date": "2022-10-02",
+      "deviation": 0.58
+    },
+    {
+      "date": "2022-10-09",
+      "deviation": 0.59
+    },
+    {
+      "date": "2022-10-16",
+      "deviation": 0.56
+    },
+    {
+      "date": "2022-10-23",
+      "deviation": 0.53
+    },
+    {
+      "date": "2022-10-30",
+      "deviation": 0.5
+    },
+    {
+      "date": "2022-11-06",
+      "deviation": 0.48
+    },
+    {
+      "date": "2022-11-13",
+      "deviation": 0.52
+    },
+    {
+      "date": "2022-11-20",
+      "deviation": 0.48
+    },
+    {
+      "date": "2022-11-27",
+      "deviation": 0.51
+    },
+    {
+      "date": "2022-12-04",
+      "deviation": 0.48
+    },
+    {
+      "date": "2022-12-11",
+      "deviation": 0.47
+    },
+    {
+      "date": "2022-12-18",
+      "deviation": 0.45
+    },
+    {
+      "date": "2022-12-25",
+      "deviation": 0.45
+    },
+    {
+      "date": "2023-01-01",
+      "deviation": 0.45
+    },
+    {
+      "date": "2023-01-08",
+      "deviation": 0.45
+    },
+    {
+      "date": "2023-01-15",
+      "deviation": 0.44
+    },
+    {
+      "date": "2023-01-22",
+      "deviation": 0.45
+    },
+    {
+      "date": "2023-01-29",
+      "deviation": 0.46
+    },
+    {
+      "date": "2023-02-05",
+      "deviation": 0.45
+    },
+    {
+      "date": "2023-02-12",
+      "deviation": 0.45
+    },
+    {
+      "date": "2023-02-19",
+      "deviation": 0.45
+    },
+    {
+      "date": "2023-02-26",
+      "deviation": 0.44
+    },
+    {
+      "date": "2023-03-05",
+      "deviation": 0.44
+    },
+    {
+      "date": "2023-03-12",
+      "deviation": 0.46
+    },
+    {
+      "date": "2023-03-19",
+      "deviation": 0.45
+    },
+    {
+      "date": "2023-03-26",
+      "deviation": 0.45
+    },
+    {
+      "date": "2023-04-02",
+      "deviation": 0.45
+    },
+    {
+      "date": "2023-04-09",
+      "deviation": 0.45
+    },
+    {
+      "date": "2023-04-16",
+      "deviation": 0.43
+    },
+    {
+      "date": "2023-04-23",
+      "deviation": 0.44
+    },
+    {
+      "date": "2023-04-30",
+      "deviation": 0.42
+    },
+    {
+      "date": "2023-05-07",
+      "deviation": 0.44
+    },
+    {
+      "date": "2023-05-14",
+      "deviation": 0.43
+    },
+    {
+      "date": "2023-05-21",
+      "deviation": 0.42
+    },
+    {
+      "date": "2023-05-28",
+      "deviation": 0.41
+    },
+    {
+      "date": "2023-06-04",
+      "deviation": 0.43
+    },
+    {
+      "date": "2023-06-11",
+      "deviation": 0.45
+    },
+    {
+      "date": "2023-06-18",
+      "deviation": 0.44
+    },
+    {
+      "date": "2023-06-25",
+      "deviation": 0.42
+    },
+    {
+      "date": "2023-07-02",
+      "deviation": 0.43
+    },
+    {
+      "date": "2023-07-09",
+      "deviation": 0.4
+    },
+    {
+      "date": "2023-07-16",
+      "deviation": 0.4
+    },
+    {
+      "date": "2023-07-23",
+      "deviation": 0.41
+    },
+    {
+      "date": "2023-07-30",
+      "deviation": 0.52
+    },
+    {
+      "date": "2023-08-06",
+      "deviation": 0.54
+    },
+    {
+      "date": "2023-08-13",
+      "deviation": 0.57
+    },
+    {
+      "date": "2023-08-20",
+      "deviation": 0.57
+    },
+    {
+      "date": "2023-08-27",
+      "deviation": 0.6
+    },
+    {
+      "date": "2023-09-03",
+      "deviation": 0.63
+    },
+    {
+      "date": "2023-09-10",
+      "deviation": 0.63
+    },
+    {
+      "date": "2023-09-17",
+      "deviation": 0.64
+    },
+    {
+      "date": "2023-09-24",
+      "deviation": 0.64
+    },
+    {
+      "date": "2023-10-01",
+      "deviation": 0.64
+    },
+    {
+      "date": "2023-10-08",
+      "deviation": 0.63
+    },
+    {
+      "date": "2023-10-15",
+      "deviation": 0.64
+    },
+    {
+      "date": "2023-10-22",
+      "deviation": 0.61
+    },
+    {
+      "date": "2023-10-29",
+      "deviation": 0.64
+    },
+    {
+      "date": "2023-11-05",
+      "deviation": 0.64
+    },
+    {
+      "date": "2023-11-12",
+      "deviation": 0.61
+    },
+    {
+      "date": "2023-11-19",
+      "deviation": 0.62
+    },
+    {
+      "date": "2023-11-26",
+      "deviation": 0.63
+    },
+    {
+      "date": "2023-12-03",
+      "deviation": 0.6
+    },
+    {
+      "date": "2023-12-10",
+      "deviation": 0.53
+    },
+    {
+      "date": "2023-12-17",
+      "deviation": 0.54
+    },
+    {
+      "date": "2023-12-24",
+      "deviation": 0.51
+    },
+    {
+      "date": "2023-12-31",
+      "deviation": 0.5
+    },
+    {
+      "date": "2024-01-07",
+      "deviation": 0.49
+    },
+    {
+      "date": "2024-01-14",
+      "deviation": 0.5
+    },
+    {
+      "date": "2024-01-21",
+      "deviation": 0.5
+    },
+    {
+      "date": "2024-01-28",
+      "deviation": 0.53
+    },
+    {
+      "date": "2024-02-04",
+      "deviation": 0.52
+    },
+    {
+      "date": "2024-02-11",
+      "deviation": 0.53
+    },
+    {
+      "date": "2024-02-18",
+      "deviation": 0.52
+    },
+    {
+      "date": "2024-02-25",
+      "deviation": 0.51
+    },
+    {
+      "date": "2024-03-03",
+      "deviation": 0.46
+    },
+    {
+      "date": "2024-03-10",
+      "deviation": 0.47
+    },
+    {
+      "date": "2024-03-17",
+      "deviation": 0.47
+    },
+    {
+      "date": "2024-03-24",
+      "deviation": 0.45
+    },
+    {
+      "date": "2024-03-31",
+      "deviation": 0.44
+    },
+    {
+      "date": "2024-04-07",
+      "deviation": 0.43
+    },
+    {
+      "date": "2024-04-14",
+      "deviation": 0.43
+    },
+    {
+      "date": "2024-04-21",
+      "deviation": 0.41
+    },
+    {
+      "date": "2024-04-28",
+      "deviation": 0.41
+    },
+    {
+      "date": "2024-05-05",
+      "deviation": 0.43
+    },
+    {
+      "date": "2024-05-12",
+      "deviation": 0.43
+    },
+    {
+      "date": "2024-05-19",
+      "deviation": 0.42
+    },
+    {
+      "date": "2024-05-26",
+      "deviation": 0.41
+    },
+    {
+      "date": "2024-06-02",
+      "deviation": 0.41
+    },
+    {
+      "date": "2024-06-09",
+      "deviation": 0.41
+    },
+    {
+      "date": "2024-06-16",
+      "deviation": 0.41
+    },
+    {
+      "date": "2024-06-23",
+      "deviation": 0.42
+    },
+    {
+      "date": "2024-06-30",
+      "deviation": 0.41
+    },
+    {
+      "date": "2024-07-07",
+      "deviation": 0.41
+    },
+    {
+      "date": "2024-07-14",
+      "deviation": 0.42
+    },
+    {
+      "date": "2024-07-21",
+      "deviation": 0.43
+    },
+    {
+      "date": "2024-07-28",
+      "deviation": 0.44
+    },
+    {
+      "date": "2024-08-04",
+      "deviation": 0.43
+    },
+    {
+      "date": "2024-08-11",
+      "deviation": 0.43
+    },
+    {
+      "date": "2024-08-18",
+      "deviation": 0.42
+    },
+    {
+      "date": "2024-08-25",
+      "deviation": 0.41
+    },
+    {
+      "date": "2024-09-01",
+      "deviation": 0.41
+    },
+    {
+      "date": "2024-09-08",
+      "deviation": 0.39
+    },
+    {
+      "date": "2024-09-15",
+      "deviation": 0.38
+    },
+    {
+      "date": "2024-09-22",
+      "deviation": 0.45
+    },
+    {
+      "date": "2024-09-29",
+      "deviation": 0.45
+    },
+    {
+      "date": "2024-10-06",
+      "deviation": 0.46
+    },
+    {
+      "date": "2024-10-13",
+      "deviation": 0.48
+    },
+    {
+      "date": "2024-10-20",
+      "deviation": 0.69
+    },
+    {
+      "date": "2024-10-27",
+      "deviation": 1.08
+    },
+    {
+      "date": "2024-11-03",
+      "deviation": 1.91
+    },
+    {
+      "date": "2024-11-10",
+      "deviation": 3.6
+    },
+    {
+      "date": "2024-11-17",
+      "deviation": 3.35
+    },
+    {
+      "date": "2024-11-24",
+      "deviation": 3.17
+    },
+    {
+      "date": "2024-12-01",
+      "deviation": 3.14
+    },
+    {
+      "date": "2024-12-08",
+      "deviation": 2.98
+    },
+    {
+      "date": "2024-12-15",
+      "deviation": 2.92
+    },
+    {
+      "date": "2024-12-22",
+      "deviation": 2.81
+    },
+    {
+      "date": "2024-12-29",
+      "deviation": 2.75
+    },
+    {
+      "date": "2025-01-05",
+      "deviation": 2.66
+    },
+    {
+      "date": "2025-01-12",
+      "deviation": 2.53
+    },
+    {
+      "date": "2025-01-19",
+      "deviation": 2.43
+    },
+    {
+      "date": "2025-01-26",
+      "deviation": 2.38
+    },
+    {
+      "date": "2025-02-02",
+      "deviation": 2.31
+    },
+    {
+      "date": "2025-02-09",
+      "deviation": 2.26
+    },
+    {
+      "date": "2025-02-16",
+      "deviation": 2.27
+    },
+    {
+      "date": "2025-02-23",
+      "deviation": 2.14
+    },
+    {
+      "date": "2025-03-02",
+      "deviation": 1.99
+    },
+    {
+      "date": "2025-03-09",
+      "deviation": 1.84
+    },
+    {
+      "date": "2025-03-16",
+      "deviation": 1.8
+    },
+    {
+      "date": "2025-03-23",
+      "deviation": 1.8
+    },
+    {
+      "date": "2025-03-30",
+      "deviation": 2.27
+    },
+    {
+      "date": "2025-04-06",
+      "deviation": 2.1
+    },
+    {
+      "date": "2025-04-13",
+      "deviation": 2.03
+    },
+    {
+      "date": "2025-04-20",
+      "deviation": 2.07
+    },
+    {
+      "date": "2025-04-27",
+      "deviation": 2.06
+    },
+    {
+      "date": "2025-05-04",
+      "deviation": 2.0
+    },
+    {
+      "date": "2025-05-11",
+      "deviation": 1.82
+    },
+    {
+      "date": "2025-05-18",
+      "deviation": 1.8
+    },
+    {
+      "date": "2025-05-25",
+      "deviation": 1.54
+    },
+    {
+      "date": "2025-06-01",
+      "deviation": 1.7
+    },
+    {
+      "date": "2025-06-08",
+      "deviation": 1.49
+    },
+    {
+      "date": "2025-06-15",
+      "deviation": 1.37
+    },
+    {
+      "date": "2025-06-22",
+      "deviation": 1.42
+    },
+    {
+      "date": "2025-06-29",
+      "deviation": 1.45
+    },
+    {
+      "date": "2025-07-06",
+      "deviation": 1.46
+    },
+    {
+      "date": "2025-07-13",
+      "deviation": 1.42
+    },
+    {
+      "date": "2025-07-20",
+      "deviation": 1.39
+    },
+    {
+      "date": "2025-07-27",
+      "deviation": 1.37
+    },
+    {
+      "date": "2025-08-03",
+      "deviation": 1.32
+    },
+    {
+      "date": "2025-08-10",
+      "deviation": 1.29
+    },
+    {
+      "date": "2025-08-17",
+      "deviation": 1.17
+    },
+    {
+      "date": "2025-08-24",
+      "deviation": 1.19
+    },
+    {
+      "date": "2025-08-31",
+      "deviation": 1.16
+    },
+    {
+      "date": "2025-09-07",
+      "deviation": 1.16
+    },
+    {
+      "date": "2025-09-14",
+      "deviation": 0.92
+    },
+    {
+      "date": "2025-09-21",
+      "deviation": 0.91
+    },
+    {
+      "date": "2025-09-28",
+      "deviation": 0.85
+    },
+    {
+      "date": "2025-10-05",
+      "deviation": 0.99
+    },
+    {
+      "date": "2025-10-12",
+      "deviation": 1.1
+    },
+    {
+      "date": "2025-10-19",
+      "deviation": 1.2
+    },
+    {
+      "date": "2025-10-26",
+      "deviation": 1.15
+    },
+    {
+      "date": "2025-11-02",
+      "deviation": 1.13
+    },
+    {
+      "date": "2025-11-09",
+      "deviation": 1.08
+    },
+    {
+      "date": "2025-11-16",
+      "deviation": 1.07
+    },
+    {
+      "date": "2025-11-23",
+      "deviation": 1.01
+    },
+    {
+      "date": "2025-11-30",
+      "deviation": 1.01
+    },
+    {
+      "date": "2025-12-07",
+      "deviation": 1.01
+    },
+    {
+      "date": "2025-12-14",
+      "deviation": 1.01
+    },
+    {
+      "date": "2025-12-21",
+      "deviation": 1.0
+    },
+    {
+      "date": "2025-12-28",
+      "deviation": 1.01
+    },
+    {
+      "date": "2026-01-04",
+      "deviation": 1.01
+    },
+    {
+      "date": "2026-01-11",
+      "deviation": 0.98
+    },
+    {
+      "date": "2026-01-18",
+      "deviation": 0.98
+    },
+    {
+      "date": "2026-01-25",
+      "deviation": 0.95
+    },
+    {
+      "date": "2026-02-01",
+      "deviation": 0.87
+    },
+    {
+      "date": "2026-02-08",
+      "deviation": 0.87
+    },
+    {
+      "date": "2026-02-15",
+      "deviation": 0.9
+    },
+    {
+      "date": "2026-02-22",
+      "deviation": 0.86
+    }
+  ],
+  "xKey": "date",
+  "yKeys": [
+    "deviation"
+  ],
+  "title": "Kalshi: Calibration Accuracy Over Time",
+  "yUnit": "percent",
+  "xLabel": "Date",
+  "yLabel": "Mean Absolute Deviation (%)"
+}

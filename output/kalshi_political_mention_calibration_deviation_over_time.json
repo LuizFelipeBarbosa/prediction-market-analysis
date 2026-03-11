@@ -1,0 +1,240 @@
+{
+  "type": "area",
+  "data": [
+    {
+      "date": "2025-02-02",
+      "deviation": 20.52
+    },
+    {
+      "date": "2025-02-09",
+      "deviation": 20.52
+    },
+    {
+      "date": "2025-02-16",
+      "deviation": 10.89
+    },
+    {
+      "date": "2025-02-23",
+      "deviation": 6.53
+    },
+    {
+      "date": "2025-03-02",
+      "deviation": 7.09
+    },
+    {
+      "date": "2025-03-09",
+      "deviation": 5.9
+    },
+    {
+      "date": "2025-03-16",
+      "deviation": 5.93
+    },
+    {
+      "date": "2025-03-23",
+      "deviation": 5.46
+    },
+    {
+      "date": "2025-03-30",
+      "deviation": 5.16
+    },
+    {
+      "date": "2025-04-06",
+      "deviation": 4.41
+    },
+    {
+      "date": "2025-04-13",
+      "deviation": 4.09
+    },
+    {
+      "date": "2025-04-20",
+      "deviation": 4.82
+    },
+    {
+      "date": "2025-04-27",
+      "deviation": 5.12
+    },
+    {
+      "date": "2025-05-04",
+      "deviation": 4.38
+    },
+    {
+      "date": "2025-05-11",
+      "deviation": 4.4
+    },
+    {
+      "date": "2025-05-18",
+      "deviation": 4.59
+    },
+    {
+      "date": "2025-05-25",
+      "deviation": 3.9
+    },
+    {
+      "date": "2025-06-01",
+      "deviation": 3.61
+    },
+    {
+      "date": "2025-06-08",
+      "deviation": 3.7
+    },
+    {
+      "date": "2025-06-15",
+      "deviation": 4.51
+    },
+    {
+      "date": "2025-06-22",
+      "deviation": 4.59
+    },
+    {
+      "date": "2025-06-29",
+      "deviation": 4.28
+    },
+    {
+      "date": "2025-07-06",
+      "deviation": 3.71
+    },
+    {
+      "date": "2025-07-13",
+      "deviation": 3.85
+    },
+    {
+      "date": "2025-07-20",
+      "deviation": 3.67
+    },
+    {
+      "date": "2025-07-27",
+      "deviation": 3.4
+    },
+    {
+      "date": "2025-08-03",
+      "deviation": 3.31
+    },
+    {
+      "date": "2025-08-10",
+      "deviation": 2.87
+    },
+    {
+      "date": "2025-08-17",
+      "deviation": 3.04
+    },
+    {
+      "date": "2025-08-24",
+      "deviation": 3.06
+    },
+    {
+      "date": "2025-08-31",
+      "deviation": 3.12
+    },
+    {
+      "date": "2025-09-07",
+      "deviation": 3.38
+    },
+    {
+      "date": "2025-09-14",
+      "deviation": 3.35
+    },
+    {
+      "date": "2025-09-21",
+      "deviation": 3.01
+    },
+    {
+      "date": "2025-09-28",
+      "deviation": 2.91
+    },
+    {
+      "date": "2025-10-05",
+      "deviation": 2.74
+    },
+    {
+      "date": "2025-10-12",
+      "deviation": 2.2
+    },
+    {
+      "date": "2025-10-19",
+      "deviation": 1.77
+    },
+    {
+      "date": "2025-10-26",
+      "deviation": 1.89
+    },
+    {
+      "date": "2025-11-02",
+      "deviation": 1.83
+    },
+    {
+      "date": "2025-11-09",
+      "deviation": 1.59
+    },
+    {
+      "date": "2025-11-16",
+      "deviation": 2.2
+    },
+    {
+      "date": "2025-11-23",
+      "deviation": 2.11
+    },
+    {
+      "date": "2025-11-30",
+      "deviation": 2.11
+    },
+    {
+      "date": "2025-12-07",
+      "deviation": 2.11
+    },
+    {
+      "date": "2025-12-14",
+      "deviation": 2.11
+    },
+    {
+      "date": "2025-12-21",
+      "deviation": 1.91
+    },
+    {
+      "date": "2025-12-28",
+      "deviation": 1.88
+    },
+    {
+      "date": "2026-01-04",
+      "deviation": 1.63
+    },
+    {
+      "date": "2026-01-11",
+      "deviation": 1.57
+    },
+    {
+      "date": "2026-01-18",
+      "deviation": 1.5
+    },
+    {
+      "date": "2026-01-25",
+      "deviation": 1.02
+    },
+    {
+      "date": "2026-02-01",
+      "deviation": 1.41
+    },
+    {
+      "date": "2026-02-08",
+      "deviation": 1.57
+    },
+    {
+      "date": "2026-02-15",
+      "deviation": 1.73
+    },
+    {
+      "date": "2026-02-22",
+      "deviation": 1.71
+    }
+  ],
+  "xKey": "date",
+  "yKeys": [
+    "deviation"
+  ],
+  "title": "Kalshi: Political Mention Calibration Accuracy Over Time",
+  "yUnit": "percent",
+  "colors": {
+    "deviation": "#d62728"
+  },
+  "xLabel": "Date",
+  "yLabel": "Mean Absolute Deviation (%)"
+}
