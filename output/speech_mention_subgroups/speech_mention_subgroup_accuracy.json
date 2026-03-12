@@ -1,0 +1,64 @@
+{
+  "type": "line",
+  "data": [
+    {
+      "interval": "1d",
+      "Group 1: Trump Markets": 6.66,
+      "Group 2: Press Briefings": 9.18,
+      "Group 3: Mayoral (Zohran Mamdani)": 12.18,
+      "Group 4: Niche / One-offs": 9.87
+    },
+    {
+      "interval": "6h",
+      "Group 1: Trump Markets": 8.17,
+      "Group 2: Press Briefings": 8.89,
+      "Group 3: Mayoral (Zohran Mamdani)": 9.11,
+      "Group 4: Niche / One-offs": 9.43
+    },
+    {
+      "interval": "2h",
+      "Group 1: Trump Markets": 12.64,
+      "Group 2: Press Briefings": 14.09,
+      "Group 3: Mayoral (Zohran Mamdani)": 11.25,
+      "Group 4: Niche / One-offs": 10.88
+    },
+    {
+      "interval": "1h",
+      "Group 1: Trump Markets": 16.99,
+      "Group 2: Press Briefings": 14.92,
+      "Group 3: Mayoral (Zohran Mamdani)": 17.35,
+      "Group 4: Niche / One-offs": 18.54
+    },
+    {
+      "interval": "30m",
+      "Group 1: Trump Markets": 18.65,
+      "Group 2: Press Briefings": 16.56,
+      "Group 3: Mayoral (Zohran Mamdani)": 20.37,
+      "Group 4: Niche / One-offs": 18.56
+    },
+    {
+      "interval": "10m",
+      "Group 1: Trump Markets": 18.88,
+      "Group 2: Press Briefings": 17.27,
+      "Group 3: Mayoral (Zohran Mamdani)": 21.61,
+      "Group 4: Niche / One-offs": 18.96
+    }
+  ],
+  "xKey": "interval",
+  "yKeys": [
+    "Group 1: Trump Markets",
+    "Group 2: Press Briefings",
+    "Group 3: Mayoral (Zohran Mamdani)",
+    "Group 4: Niche / One-offs"
+  ],
+  "title": "Calibration Bias Reduction Near Close (MAD)",
+  "yUnit": "percent",
+  "colors": {
+    "Group 1: Trump Markets": "#d62728",
+    "Group 2: Press Briefings": "#1f77b4",
+    "Group 3: Mayoral (Zohran Mamdani)": "#2ca02c",
+    "Group 4: Niche / One-offs": "#ff7f0e"
+  },
+  "xLabel": "Time Before Market Close",
+  "yLabel": "Mean Absolute Deviation (%)"
+}
