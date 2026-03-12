@@ -237,9 +237,13 @@ class SpeechMentionSubgroupAccuracyAnalysis(Analysis):
         bins_5c = np.linspace(0, 100, 21) # 0, 5, ..., 100
         labels_5c = [f"{(b)}-{(b+5)}%" for b in bins_5c[:-1]]
         
+        bins_1c = np.arange(0, 101)  # 0, 1, 2, ..., 100
+        labels_1c = [f"{int(b)}%" for b in bins_1c[:-1]]
+        
         profit_breakdown = []
         calibration_dfs_10c = {}
         calibration_dfs_5c = {}
+        calibration_dfs_1c = {}
         mad_over_time = {}
         
         # Time intervals in chronological order for plotting
@@ -298,6 +302,11 @@ class SpeechMentionSubgroupAccuracyAnalysis(Analysis):
             cal_by_time_5c, _ = calculate_calibration(g_df, bins_5c, labels_5c, midpoints_5c)
             calibration_dfs_5c[g] = cal_by_time_5c
             
+            # Calibration per time interval (1c)
+            midpoints_1c = np.arange(0.5, 100, 1)  # 0.5, 1.5, ..., 99.5
+            cal_by_time_1c, _ = calculate_calibration(g_df, bins_1c, labels_1c, midpoints_1c)
+            calibration_dfs_1c[g] = cal_by_time_1c
+            
             # EV Profitability (using 2-hour mark for canonical profitability mapping)
             def get_counts_profit(prefix):
                 g_traded_df = g_df[g_df[f"{prefix}_traded"] == 1]
@@ -342,6 +351,7 @@ class SpeechMentionSubgroupAccuracyAnalysis(Analysis):
         # Generate figures and charts
         figures_10c, mad_fig = self._create_figures(calibration_dfs_10c, mad_over_time, profit_df, "10c")
         figures_5c, _ = self._create_figures(calibration_dfs_5c, mad_over_time, profit_df, "5c")
+        figures_1c, _ = self._create_figures(calibration_dfs_1c, mad_over_time, profit_df, "1c")
         vwap_trace_figures = self._create_vwap_trace_figures(df)
         
         # Combine figures to return for explicit handling in save
@@ -366,6 +376,7 @@ class SpeechMentionSubgroupAccuracyAnalysis(Analysis):
                 structured_figures[group_key] = [
                     figures_10c.get(group_key),
                     figures_5c.get(group_key),
+                    figures_1c.get(group_key),
                     vwap_trace_figures.get(group_key)
                 ]
 
@@ -421,7 +432,7 @@ class SpeechMentionSubgroupAccuracyAnalysis(Analysis):
                 
                 # Save individual PNGs for safety
                 if "png" in fig_formats:
-                    suffixes = ["10c_calibration", "5c_calibration", "vwap_trace"]
+                    suffixes = ["10c_calibration", "5c_calibration", "1c_calibration", "vwap_trace"]
                     for idx, fig in enumerate(figs):
                         if idx < len(suffixes):
                             png_path = custom_output_dir / f"{name}_speech_mention_subgroup_accuracy_{suffixes[idx]}.png"
@@ -469,13 +480,16 @@ class SpeechMentionSubgroupAccuracyAnalysis(Analysis):
         
         if bucket_type == "10c":
             x_bins = np.arange(10)
-            ideal_cal = np.linspace(5, 95, 10) 
-        else:
+            ideal_cal = np.linspace(5, 95, 10)
+        elif bucket_type == "5c":
             x_bins = np.arange(20)
             ideal_cal = np.linspace(2.5, 97.5, 20)
+        else:  # 1c
+            x_bins = np.arange(100)
+            ideal_cal = np.arange(0.5, 100, 1)
         
         for g in groups:
-            fig, ax = plt.subplots(figsize=(10, 6))
+            fig, ax = plt.subplots(figsize=(14, 6) if bucket_type == "1c" else (10, 6))
             # Handle cases where subgroup may have no data (e.g. empty)
             subgroup_data = profit_df[profit_df["subgroup"] == g]
             if subgroup_data.empty:
@@ -499,18 +513,28 @@ class SpeechMentionSubgroupAccuracyAnalysis(Analysis):
             for j, interval in enumerate(time_intervals):
                 cal = cal_by_time[interval]
                 y = cal["actual_yes_pct"].fillna(np.nan) * 100
-                ax.plot(x_bins, y, marker="o", color=colors[j], linewidth=2, label=f"{interval} before Close")
+                marker = "" if bucket_type == "1c" else "o"
+                lw = 1.2 if bucket_type == "1c" else 2
+                ax.plot(x_bins, y, marker=marker, color=colors[j], linewidth=lw, label=f"{interval} before Close")
                 
                 # To prevent charting chaos, we only annotate 'n' counts for the 2h bucket (legacy view)
-                if interval == "2h":
+                # Skip annotations entirely for 1c since there are too many points
+                if interval == "2h" and bucket_type != "1c":
                     for k, val in enumerate(y):
                         if not np.isnan(val):
                             n_count = cal.iloc[k]["n"]
                             if n_count > 0:
                                 ax.text(x_bins[k], val + 3, f"n={n_count}", ha="center", va="bottom", fontsize=8)
 
-            ax.set_xticks(x_bins)
-            ax.set_xticklabels(prob_labels, rotation=45, ha="right")
+            if bucket_type == "1c":
+                # Show every 10th tick for readability
+                tick_positions = np.arange(0, 100, 10)
+                tick_labels = [prob_labels[i] for i in tick_positions]
+                ax.set_xticks(tick_positions)
+                ax.set_xticklabels(tick_labels, rotation=45, ha="right")
+            else:
+                ax.set_xticks(x_bins)
+                ax.set_xticklabels(prob_labels, rotation=45, ha="right")
             ax.set_ylim(-5, 110)
             
             ax.set_xlabel(f"Market Implied Probability ({bucket_type} buckets)")
