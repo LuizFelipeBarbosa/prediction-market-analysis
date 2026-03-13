@@ -3,45 +3,45 @@
   "data": [
     {
       "interval": "1d",
-      "Group 1: Trump Markets": 6.66,
+      "Group 1: Trump Markets": 6.48,
       "Group 2: Press Briefings": 9.18,
-      "Group 3: Mayoral (Zohran Mamdani)": 12.18,
-      "Group 4: Niche / One-offs": 9.87
+      "Group 3: Mayoral (Zohran Mamdani)": 9.08,
+      "Group 4: Niche / One-offs": 6.91
     },
     {
       "interval": "6h",
-      "Group 1: Trump Markets": 8.17,
+      "Group 1: Trump Markets": 8.1,
       "Group 2: Press Briefings": 8.89,
-      "Group 3: Mayoral (Zohran Mamdani)": 9.11,
-      "Group 4: Niche / One-offs": 9.43
+      "Group 3: Mayoral (Zohran Mamdani)": 10.01,
+      "Group 4: Niche / One-offs": 7.99
     },
     {
       "interval": "2h",
-      "Group 1: Trump Markets": 12.64,
+      "Group 1: Trump Markets": 12.56,
       "Group 2: Press Briefings": 14.09,
-      "Group 3: Mayoral (Zohran Mamdani)": 11.25,
-      "Group 4: Niche / One-offs": 10.88
+      "Group 3: Mayoral (Zohran Mamdani)": 12.09,
+      "Group 4: Niche / One-offs": 14.59
     },
     {
       "interval": "1h",
-      "Group 1: Trump Markets": 16.99,
+      "Group 1: Trump Markets": 16.78,
       "Group 2: Press Briefings": 14.92,
-      "Group 3: Mayoral (Zohran Mamdani)": 17.35,
-      "Group 4: Niche / One-offs": 18.54
+      "Group 3: Mayoral (Zohran Mamdani)": 17.68,
+      "Group 4: Niche / One-offs": 16.7
     },
     {
       "interval": "30m",
-      "Group 1: Trump Markets": 18.65,
+      "Group 1: Trump Markets": 18.6,
       "Group 2: Press Briefings": 16.56,
-      "Group 3: Mayoral (Zohran Mamdani)": 20.37,
-      "Group 4: Niche / One-offs": 18.56
+      "Group 3: Mayoral (Zohran Mamdani)": 20.38,
+      "Group 4: Niche / One-offs": 16.93
     },
     {
       "interval": "10m",
-      "Group 1: Trump Markets": 18.88,
+      "Group 1: Trump Markets": 18.76,
       "Group 2: Press Briefings": 17.27,
-      "Group 3: Mayoral (Zohran Mamdani)": 21.61,
-      "Group 4: Niche / One-offs": 18.96
+      "Group 3: Mayoral (Zohran Mamdani)": 21.59,
+      "Group 4: Niche / One-offs": 16.78
     }
   ],
   "xKey": "interval",

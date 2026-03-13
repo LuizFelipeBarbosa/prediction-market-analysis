@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from src.analysis.kalshi.util.categories import CATEGORY_SQL, get_group
+from src.analysis.kalshi.util.categories import CATEGORY_SQL
 from src.common.analysis import Analysis, AnalysisOutput
 from src.common.interfaces.chart import ChartConfig, ChartType, UnitType
 
@@ -109,34 +109,14 @@ class SpeechMentionSubgroupAccuracyAnalysis(Analysis):
             """
         ).df()
 
-        # Strict political filtering
-        df["group_cat"] = df["category"].apply(get_group)
-        df = df[df["group_cat"] == "Politics"].copy()
-
-        # Parse speaker and event
-        pat1 = r"What will (.+?) say during (.+?)\?"
-        pat2 = r"Will the (White House Press Secretary) say .+ at (her next press briefing)\?"
-        pat3 = r"Will ([^s]+ [^s]+) say .+ at ((?:his|her) next NYC Mayor\'s Office announcement)\?"
-        
-        speaker1 = df["title"].str.extract(pat1, expand=True)[0]
-        event1 = df["title"].str.extract(pat1, expand=True)[1]
-        
-        speaker2 = df["title"].str.extract(pat2, expand=True)[0]
-        event2 = df["title"].str.extract(pat2, expand=True)[1]
-
-        speaker3 = df["title"].str.extract(pat3, expand=True)[0]
-        event3 = df["title"].str.extract(pat3, expand=True)[1]
-        
-        df["speaker"] = speaker1.fillna(speaker2).fillna(speaker3).fillna("Unknown")
-        df["event"] = event1.fillna(event2).fillna(event3).fillna("Unknown")
-
-        # Map logic to subgroups
+        # Assign subgroups based on category code (event ticker prefix)
         def assign_subgroup(row):
-            if row["speaker"] in ["Donald Trump", "Trump", "President Trump"]:
+            c = row["category"].upper()
+            if "TRUMPMENTION" in c or "TRUMPMENTIONB" in c:
                 return "Group 1: Trump Markets"
-            elif row["speaker"] == "White House Press Secretary":
+            elif "SECPRESSMENTION" in c:
                 return "Group 2: Press Briefings"
-            elif row["speaker"] == "Zohran Mamdani" or "NYC Mayor's Office" in row["event"]:
+            elif "MAMDANIMENTION" in c or "NYCMAYORDEBATEMENTION" in c:
                 return "Group 3: Mayoral (Zohran Mamdani)"
             else:
                 return "Group 4: Niche / One-offs"
